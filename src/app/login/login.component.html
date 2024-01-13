@@ -1,0 +1,38 @@
+<div class="card login-card">
+    <div class="card-header" style="text-align:center;">
+        <b>Login</b>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col">
+                <b>Username</b>
+            </div>
+            <div class="col">
+                <input type="text" placeholder="Enter Username" [(ngModel)]="user.username">
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col">
+                <b>Password</b>
+            </div>
+            <div class="col">
+                <input type="password" placeholder="Enter Password" [(ngModel)]="user.password">
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-link" style="text-decoration:none;">forgot password</button>
+            </div>
+            <div class="col">
+                <button type="button" class="btn btn-secondary" (click)="onLogin(user)" style="float: right;">Login</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-link" (click)="onSignup()" style="text-decoration: none;float: right;">Signup</button>
+            </div>
+        </div>
+    </div>
+</div>
