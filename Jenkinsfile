@@ -6,6 +6,7 @@ pipeline {
                 checkout scm
             }
         }
+        
         stage("Build"){
             steps{
                 sh 'sudo apt install npm'
