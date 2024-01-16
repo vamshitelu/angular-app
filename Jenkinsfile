@@ -8,21 +8,7 @@ pipeline {
                 checkout scm
             }
         }
-
-        stage("Test") {
-            steps {
-                // Use Node.js and npm installed on the Jenkins agent
-                bat 'npm install'
-            }
-        }
-
-        stage("Build") {
-            steps {
-                // Build the Angular app
-                bat 'npm run build --prod'
-            }
-        }
-        stage("Build Image"){
+        stage("Build"){
             steps{
                  bat 'docker build -t my-app:1.2 .'
             }
