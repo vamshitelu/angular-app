@@ -12,7 +12,7 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // Use Node.js and npm installed on the Jenkins agent
-                sh 'sudo apt npm install'
+                sh 'sudo apt install npm'
             }
         }
 
