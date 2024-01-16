@@ -2,24 +2,24 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage("Checkout") {
             steps {
                 // Check out the source code from your repository
                 checkout scm
             }
         }
 
-        stage('Install Dependencies') {
+        stage("Test") {
             steps {
                 // Use Node.js and npm installed on the Jenkins agent
                 sh 'sudo apt install npm'
             }
         }
 
-        stage('Build Angular App') {
+        stage("Build") {
             steps {
                 // Build the Angular app
-                sh 'npm run build'
+                sh 'npm run build --prod'
             }
         }
     }
