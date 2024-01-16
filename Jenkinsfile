@@ -12,14 +12,14 @@ pipeline {
         stage("Test") {
             steps {
                 // Use Node.js and npm installed on the Jenkins agent
-                bat install npm
+                bat 'install npm'
             }
         }
 
         stage("Build") {
             steps {
                 // Build the Angular app
-                bat npm run build --prod
+                bat 'npm run build --prod'
             }
         }
     }
