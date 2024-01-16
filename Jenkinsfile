@@ -15,7 +15,7 @@ pipeline {
         }
         stage("Deploy"){
             steps {
-                withCredentials([usernamePassword(credentialsId:'docker_cred',passwordVariable: 'Krish@1234',usernameVariable: 'vamshitelu')]){
+                withCredentials([usernamePassword(credentialsId:'docker_cred',passwordVariable: 'DOCKER_PASSWORD',usernameVariable: 'DOCKER_USERNAME')]){
                     bat 'docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD'
                     bat 'docker tag my-app:1.2 vamshitelu/my-app:1.2'
                     bat 'docker push vamshitelu/my-app:1.2'
